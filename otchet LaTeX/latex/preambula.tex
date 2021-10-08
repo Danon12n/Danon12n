@@ -2,7 +2,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 
-\usepackage[left=30mm, right=20mm, top=20mm, bottom=20mm]{geometry}
+\usepackage[left=2.5cm, right=1.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+\usepackage[tableposition=top,singlelinecheck=false]{caption}
+\usepackage{subcaption}
+
+\DeclareCaptionLabelFormat{gostfigure}{Рисунок #2}
+\DeclareCaptionLabelFormat{gosttable}{Таблица #2}
+\DeclareCaptionLabelSeparator{gost}{~---~}
+\captionsetup{labelsep=gost}
+\captionsetup*[figure]{labelformat=gostfigure}
+\captionsetup*[table]{labelformat=gosttable}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
 
 \usepackage{microtype}
 \sloppy
@@ -11,15 +22,19 @@
 \onehalfspacing
 
 \usepackage{indentfirst}
-\setlength{\parindent}{12.5mm}
+\setlength\parindent{5ex}
 
 \usepackage{titlesec}
-\titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{20pt}{\LARGE\bfseries}
-\titleformat{\section}{\Large\bfseries}{\thesection}{20pt}{\Large\bfseries}
+\titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{20pt}{\Large}
+\titleformat{\section}{\Large\bfseries}{\thesection}{20pt}{\large}
 
 \addto{\captionsrussian}{\renewcommand*{\contentsname}{Содержание}}
-\usepackage{natbib}
+\usepackage[square]{natbib}
 \renewcommand{\bibsection}{\chapter*{Список литературы}}
+
+\makeatletter
+\def\@biblabel#1{#1. }
+\makeatother
 
 \usepackage{caption}
 
@@ -56,6 +71,9 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
 
+\usepackage{minted}
+\newminted{csh}{fontsize=\small, fontfamily=rm}
+
 \usepackage{listings}
 \usepackage{listingsutf8}
 \lstset{
@@ -87,3 +105,4 @@
   \leavevmode\leaders\hrule\@height#1\hfill \kern\z@
 }
 \makeatother
+
