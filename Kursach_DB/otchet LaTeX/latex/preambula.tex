@@ -5,15 +5,10 @@
 \usepackage[left=2.5cm, right=1.5cm, top=2.5cm, bottom=2.5cm]{geometry}
 
 \usepackage[tableposition=top,singlelinecheck=false]{caption}
-\usepackage{subcaption}
+\captionsetup[figure]{singlelinecheck=true}
 
-\DeclareCaptionLabelFormat{gostfigure}{Рисунок #2}
-\DeclareCaptionLabelFormat{gosttable}{Таблица #2}
-\DeclareCaptionLabelSeparator{gost}{~---~}
-\captionsetup{labelsep=gost}
-\captionsetup*[figure]{labelformat=gostfigure}
-\captionsetup*[table]{labelformat=gosttable}
-\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+
+\usepackage{subcaption}
 
 \usepackage{microtype}
 \sloppy
