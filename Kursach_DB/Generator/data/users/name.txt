@@ -1,0 +1,11 @@
+string
+Dan
+Borya
+Milana
+Vasya
+Tima
+Dasha
+Vanya
+Pasha
+Masha
+Jora
