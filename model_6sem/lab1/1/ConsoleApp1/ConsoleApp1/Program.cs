@@ -49,29 +49,29 @@ namespace ConsoleApp1
             //--------------------------------------реализация методов Эйлера, Рунге и Пикара------------------------------
 
 
-            /* Console.Write("Enter xMax:");
-             var xMax = double.Parse(Console.ReadLine());
+            /*Console.Write("Enter xMax:");
+            var xMax = double.Parse(Console.ReadLine());
 
-             Console.Write("Enter step:");
-             var h = double.Parse(Console.ReadLine());
+            Console.Write("Enter step:");
+            var h = double.Parse(Console.ReadLine());
 
-             Console.Write("Enter Pikard approximation:");
-             var n = int.Parse(Console.ReadLine());
+            Console.Write("Enter Pikard approximation:");
+            var n = int.Parse(Console.ReadLine());
 
-             double EulerOpened_y = 0;
-             double Pikar_y;
-             double Runge_y = 0;
+            double EulerOpened_y = 0;
+            double Pikar_y;
+            double Runge_y = 0;
 
-             double x0 = 0;
-             Console.WriteLine($"      X       Euler      Pikard{n}    Runge");
-             while (x0 < xMax + h)
-             {
-                 EulerOpened_y = Methods.EulerOpened(x0, h, EulerOpened_y);
-                 Runge_y = Methods.Runge(x0, Runge_y, h);
-                 Pikar_y = Methods.Pikar(x0, n);
-                 Console.WriteLine("{0,6:F8}|{1,6:F8}|{2,6:F8}|{3,6:F8}|", x0, EulerOpened_y, Pikar_y, Runge_y);
-                 x0 += h;
-             }*/
+            double x0 = 0;
+            Console.WriteLine($"      X       Euler      Pikard{n}    Runge");
+            while (x0 < xMax + h)
+            {
+                EulerOpened_y = Methods.EulerOpened(x0, h, EulerOpened_y);
+                Runge_y = Methods.Runge(x0, Runge_y, h);
+                Pikar_y = Methods.Pikar(x0, n);
+                Console.WriteLine("{0,6:F8}|{1,6:F8}|{2,6:F8}|{3,6:F8}|", x0, EulerOpened_y, Pikar_y, Runge_y);
+                x0 += h;
+            }*/
 
             // --------------------------------------------конец----------------------------------------------------
 
