@@ -1,0 +1,11 @@
+struct file_operations fortune_proc_ops = {
+
+// .owner = THIS_MODULE,
+
+.read = seq_read,
+
+.write = my_write,
+
+};
+
+Нет 2х точек входа
