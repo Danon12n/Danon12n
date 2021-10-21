@@ -58,14 +58,14 @@ namespace lab2_modeling
         {
             data.Add("R", 0.35);
             data.Add("Le", 12);
-            data.Add("Lk", 0.000187);
+            data.Add("Lk", 0.000187); 
             data.Add("Ck", 0.000268);
             data.Add("Rk", 0.25);
             data.Add("Uc0", 1400);
             data.Add("I0", 0.5);
             data.Add("Tw", 2000);
             data.Add("Tbegin", 0);
-            data.Add("Tend", 0.0006);
+            data.Add("Tend", 0.00002);
             data.Add("Tstep", 1e-6);
         }
 
@@ -196,7 +196,8 @@ namespace lab2_modeling
             double I = data["I0"];
             double Uc = data["Uc0"];
             double hn = data["Tstep"];
-            for (double i = t; i < tmax + hn; i += hn)
+            int times = 0;
+            for (double i = t; i < tmax + hn*times; i += hn)
             {
                 graph1[0].Add(i);
                 graph1[1].Add(I);
