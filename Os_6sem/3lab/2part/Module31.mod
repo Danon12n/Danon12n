@@ -1,2 +1,2 @@
-/home/danon/bmstu/OS/3lab/3part/Module31.o
+/home/danon/Документы/GitHub/Danon12n/Os_6sem/3lab/2part/Module31.o
 

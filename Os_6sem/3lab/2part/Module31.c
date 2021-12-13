@@ -28,9 +28,9 @@ extern char* Module31_noexport(void)
    return Module31_string; 
 } 
 
-EXPORT_SYMBOL(Module31_string);
-EXPORT_SYMBOL(Module31_int); 
-EXPORT_SYMBOL(Module31_proc1); 
+EXPORT_SYMBOL(Module31_string);//тут строковая переменная, которая может быть использована другими модулями
+EXPORT_SYMBOL(Module31_int); //тут целочисленная
+EXPORT_SYMBOL(Module31_proc1); //указатель на метод, который также можно использовать
 EXPORT_SYMBOL(Module31_proc2);
 
 static int __init Module31_init(void) 

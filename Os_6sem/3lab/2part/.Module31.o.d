@@ -1,4 +1,5 @@
-Module31.o: /home/danon/bmstu/OS/3lab/3part/Module31.c \
+Module31.o: \
+ /home/danon/Документы/GitHub/Danon12n/Os_6sem/3lab/2part/Module31.c \
  include/linux/kconfig.h include/generated/autoconf.h \
  include/linux/compiler_types.h include/linux/compiler_attributes.h \
  include/linux/compiler-gcc.h include/linux/init.h \
@@ -159,4 +160,4 @@ Module31.o: /home/danon/bmstu/OS/3lab/3part/Module31.c \
  include/asm-generic/error-injection.h include/linux/static_call_types.h \
  arch/x86/include/asm/module.h include/asm-generic/module.h \
  arch/x86/include/asm/orc_types.h \
- /home/danon/bmstu/OS/3lab/3part/Module.h
+ /home/danon/Документы/GitHub/Danon12n/Os_6sem/3lab/2part/Module.h

@@ -4,13 +4,13 @@
 #include <linux/sched.h>
 #include <linux/init_task.h>
 
-MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Nechitaylo D.V.");
-MODULE_DESCRIPTION("Module Descrioption");
+MODULE_LICENSE("GPL"); //лицензия модуля, чтобы нормально работал нужна GPL
+MODULE_AUTHOR("Nechitaylo D.V."); //имя автора
+MODULE_DESCRIPTION("This module for studying."); //описание
 
-struct task_struct *task = &init_task;
+struct task_struct *task = &init_task; 
 
-static int __init Module_init(void) 
+static int __init Module_init(void) //сам метод при загрузке
 { 
    printk("ModuleMsg: Module Loaded!\n"); 
    
@@ -24,10 +24,10 @@ static int __init Module_init(void)
  	return 0; 
 }
 
-static void __exit Module_exit(void) 
+static void __exit Module_exit(void) //сам метод
 { 
    printk("ModuleMsg: Module Unloaded!\n"); 
 } 
 
-module_init(Module_init); 
-module_exit(Module_exit); 
+module_init(Module_init); //инициализация метода при регистрации модуля
+module_exit(Module_exit); //инициализация метода при выгрузке модуля

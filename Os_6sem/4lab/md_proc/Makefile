@@ -1,7 +1,7 @@
 CONFIG_MODULE_SIG=n
 KBUILD_EXTRA_SYMBOLS = $(shell pwd)/Module.symverscd
 ifneq ($(KERNELRELEASE),)
-	obj-m := Module41.o
+	obj-m := md_proc4.o
 else
 	CURRENT = $(shell uname -r)
 	KDIR = /lib/modules/$(CURRENT)/build

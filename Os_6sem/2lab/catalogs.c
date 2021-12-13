@@ -21,6 +21,8 @@ static int dopath(const char *filename, int depth, Handler *);
 
 static long nreg, ndir, nblk, nchr, nfifo, nslink, nsock, nTotal;
 
+int staterr;
+
 int main(int argc, char * argv[])
 {
 	int ret = -1; 
@@ -59,7 +61,7 @@ static int dopath(const char *filename, int depth, Handler *func)
 	DIR *dp;
 	int ret = 0;
 
-	if (lstat(filename, &statbuf) < 0) // ошибка  
+	if ((staterr = lstat(filename, &statbuf)) < 0) // ошибка  
 		return(func(filename, &statbuf, FTW_NS));
 
 	for (int i = 0; i < depth; ++i)
@@ -119,6 +121,39 @@ static int counter(const char *pathame, const struct stat *statptr, int type)
 			perror("К одному из каталогов закрыт доступ."); 
 			return(-1);
 		case FTW_NS:
+			switch (staterr)
+			{
+			case EACCES:
+				printf("Запрещен доступ");
+				break;
+			case EBADF:
+				printf("Неверный описатель файлового дескриптора");
+				break;
+			case ENOENT:
+				printf("Компонент полного имени файла filename не существует или полное имя является пустой строкой");
+				break;
+			case ENOTDIR:
+				printf("Компонент пути не является каталогом");
+				break;
+			case ELOOP:
+				printf("При поиске файла встретилась символьная ссылка");
+				break;
+			case EFAULT:
+				printf("Некорректный адрес");
+				break;
+			case ENOMEM:
+				printf("Недостаточно памяти");
+				break;
+			case ENAMETOOLONG:
+				printf("Слишком длинное название файла");
+				break;
+			case EOVERFLOW:
+				printf("Некоторые значения были слишком большими, чтоыб быть представленными в возращаемой структуре");
+				break;
+			default:
+				printf("Неизвестный код ошибки");
+				break;
+			}
 			perror("Ошибка функции stat."); 
 			return(-1);
 		default: 
