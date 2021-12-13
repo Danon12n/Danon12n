@@ -1,0 +1,302 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Fonts start*/
+/*Gilroy-400 normal*/
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.eot');
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff'),
+        url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*Gilroy-500 normal Medium*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*Gilroy-600 normal Semibold*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Semibold.eot');
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+        url('../fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Semibold.woff') format('woff'),
+        url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+/*Gilroy-700 normal Bold*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Fonts end*/
+
+/*Correction of geometry*/
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+/*Correction of geometry*/
+
+body{
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 0.83vw;
+    line-height: 1.11vh;
+    font-weight: normal;
+    color: white;
+}
+
+
+/*Main start*/
+
+.interface{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.73) ), url('../img/main-bg.jpg');
+    
+}
+
+.title {
+    position: absolute;
+    top: 30px;
+    left: 47%;
+    
+
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+}
+
+/*menu end*/
+
+/*menu start*/
+
+.menu__Container {
+    position: absolute;
+    top: 195px;
+    left: 108px;
+
+    width: 171px;
+    height: 330px;
+
+    background: blue;   
+}
+
+.menu__Element {
+    position: relative;
+    display: flex;
+    width: 171px;
+    height: 60px;
+    margin-bottom: 30px;
+    background: rgb(95, 95, 235); 
+}
+
+.menu__Rect {
+    position: relative;
+    width: 60px;
+    height: 60px;
+
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+    border-radius: 8px;
+
+    margin-right: 20px; 
+}
+
+.menu__Rect:hover {
+    background: rgba(97, 93, 250, 1);
+    transition: 0.5s;
+}
+
+
+.menu__Title {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    margin-top: 20px;
+}
+
+/*menu end*/
+
+
+/*cards start*/
+
+.cards__Container {
+    position: absolute;
+    top: 190px;
+    left: 389px;
+    right: 517px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+    grid-gap: 50px;
+}
+
+.cards__Card {
+    position: relative;
+    width: 482px;
+    height: 186px;
+    background: green;
+    padding-top: 36px;
+    padding-left: 36px;
+}
+
+.cards__Card__Ico {
+    position: absolute;
+    margin-left: 276px;
+}
+
+.cards__Card__Type {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cards__Card__Name {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 10px;
+}
+
+.cards__Card__Desc {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 186px;
+}
+/*cards end*/
+
+
+
+/*ellipses*/
+
+.ellipse1{
+    position: absolute;
+    width: 13.21vw;
+    height: 23.49vh;
+    left: -9.38vw;
+    top: 38.28vh;
+
+    
+    background: rgba(77, 220, 255, 1);
+    border-radius: 50%;
+}
+
+.ellipse2{
+    position: absolute;
+    width: 20.82vw;
+    height: 36.97vh;
+    left: -13.18vw;
+    top: 31.56vh;
+
+    background: #4DDCFF;
+    opacity: 0.45;
+    border-radius: 50%;
+}
+
+.ellipse3{
+    position: absolute;
+    width: 28.59vw;
+    height: 50.83vh;
+    left: -17.03vw;
+    top: 24.63vh;
+
+    background: #4DDCFF;
+    opacity: 0.15;
+    border-radius: 50%;
+}
+
+.ellipse4{
+    position: absolute;
+    width: 36.46vw;
+    height: 64.81vh;
+    left: -21.18vw;
+    top: 16.3vh;
+
+    background: #4DDCFF;
+    opacity: 0.15;
+    filter: blur(40px);
+    border-radius: 50%;
+}

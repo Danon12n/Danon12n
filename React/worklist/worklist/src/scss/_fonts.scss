@@ -1,0 +1,55 @@
+/*Fonts start*/
+/*Gilroy-400 normal*/
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Regular.eot');
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('../css/fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../css/fonts/Gilroy-Regular.woff') format('woff'),
+        url('../css/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*Gilroy-500 normal Medium*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../css/fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../css/fonts/Gilroy-Medium.woff') format('woff'),
+        url('../css/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*Gilroy-600 normal Semibold*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Semibold.eot');
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+        url('../css/fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../css/fonts/Gilroy-Semibold.woff') format('woff'),
+        url('../css/fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+/*Gilroy-700 normal Bold*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../css/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../css/fonts/Gilroy-Bold.woff') format('woff'),
+        url('../css/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Fonts end*/

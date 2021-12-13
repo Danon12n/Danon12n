@@ -1,0 +1,392 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Fonts start*/
+/*Gilroy-400 normal*/
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Regular.eot');
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('../css/fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../css/fonts/Gilroy-Regular.woff') format('woff'),
+        url('../css/fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*Gilroy-500 normal Medium*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../css/fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../css/fonts/Gilroy-Medium.woff') format('woff'),
+        url('../css/fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*Gilroy-600 normal Semibold*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Semibold.eot');
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+        url('../css/fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../css/fonts/Gilroy-Semibold.woff') format('woff'),
+        url('../css/fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+/*Gilroy-700 normal Bold*/
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../css/fonts/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../css/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../css/fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../css/fonts/Gilroy-Bold.woff') format('woff'),
+        url('../css/fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Fonts end*/
+
+/*Correction of geometry*/
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+/*Correction of geometry*/
+
+body{
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-size: 0.83vw;
+    line-height: 1.11vh;
+    font-weight: normal;
+    color: white;
+}
+
+
+/*Main start*/
+
+.App{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.73) ), url('../css/img/main-bg.jpg');
+    
+}
+
+/*Main end*/
+
+/*intro start*/
+.intro{
+    position: absolute;
+    left: 5.208333333333334vw;
+    top: 7.96vh;
+    height: 29.07vh;
+    width: 21.3vw;
+}
+
+.intro__title{
+    width: 15.99vw;
+    height: 15.93vh;
+    font-weight: 600;
+    font-size: calc(24px + 52 * (100vw / 1920));
+    line-height: calc(24px + 58 * (100vh / 1080));
+    margin-bottom: 30px;
+    
+}
+
+.intro__subtitle{
+    width: 21.3vw;
+    height: 10.37vh;
+    font-weight: 500;
+    font-size: calc(12px + 12 * (100vw / 1920));
+    line-height: calc(12px + 16 * (100vh / 1080));
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/*intro start*/
+
+/*jobs start*/
+
+.jobs_list{
+    position: absolute;
+    width: 55.83vw;
+    height: 46.3vh;
+    margin-top: 7.96vh;
+    margin-left: 32.5vw;
+}
+
+.jobs_list__wrap{
+    
+    position: absolute;
+    width: 56.25vw;
+    height: 89.26vh;
+
+    display: grid;
+    grid-template-columns: repeat(3, 29%);
+    grid-column-gap: 2.71vw;
+    grid-row-gap: 2.78vh;
+    overflow-y: scroll;
+    
+}
+
+@media only screen and (max-width: 1600px) {
+    .jobs_list__wrap {
+        grid-template-columns: repeat(2, 47%);
+    }
+
+}
+
+@media only screen and (max-width: 1280px) {
+    .jobs_list__wrap {
+        grid-template-columns: repeat(1, 95%);
+    }
+
+}
+
+
+.jobs__card{
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 1.67vw;
+    padding-top: 2.13vh;
+    padding-right: 1.67vw;
+    height: 43vh;
+}
+
+.jobs__card-title{
+    font-weight: 600;
+    font-size: calc(20px + 16 * (100vw / 1920));
+    line-height: calc(24px + 12 * (100vh / 1080));
+    margin-bottom: 1.06vh;
+}
+
+.jobs__card-level{
+    font-size: calc(8px + 8 * (100vw / 1920));
+    line-height: calc(12px + 7 * (100vh / 1080));
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 2.87vh;
+}
+
+.jobs__card-desc1{
+    font-size: calc(10px + 8 * (100vw / 1920));
+    line-height: calc(17px + 7 * (100vh / 1080));
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 3.87vh;
+}
+
+.jobs__card-desc2{
+    font-size: calc(8px + 8 * (100vw / 1920));
+    line-height: calc(12px + 7 * (100vh / 1080));
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.jobs__card-img{
+    display: inline;
+}
+
+.jobs__card-money{
+    display: inline;
+    font-weight: bold;
+    width: 100px;
+    font-size: calc(8px + 8 * (100vw / 1920));
+    line-height: calc(12px + 7 * (100vh / 1080));
+    color: #C2F532;
+    
+}
+
+.jobs__card-btn{
+    background: white;
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+    margin-top: 1.94vh;
+    width: 100%;
+    height: 7.96vh;
+    font-weight: 600;
+    font-size: calc(10px + 8 * (100vw / 1920));
+    line-height: calc(12px + 7 * (100vh / 1080));
+    transition: 0.5s;
+}
+
+.jobs__card-btn:hover{
+    background: rgba(97, 93, 250, 1);
+    transition: 0.5s;
+    color: white;
+}
+
+.jobs__card-btn-check-mark{
+    transition: 0.5s;
+}
+
+.jobs__card-btn:hover .jobs__card-btn-check-mark{
+    fill:white;
+    transition: 0.5s;
+}
+
+.jobs__card-btn:active{
+    background: rgba(160, 157, 255, 1);
+    color: white;
+}
+
+.jobs__card-btn-employed{
+    background: rgba(160, 157, 255, 1);
+    color: white;
+    border: none;
+    margin-top: 1.94vh;
+    width: 100%;
+    height: 7.96vh;
+    font-weight: 600;
+    font-size: calc(10px + 8 * (100vw / 1920));
+    line-height: calc(12px + 7 * (100vh / 1080));
+}
+
+.jobs__card-btn-employed:hover {
+    background: rgba(97, 93, 250, 1);
+    transition: 0.5s;
+}
+
+.jobs__card-btn-employed:hover .jobs__card-btn-check-mark{
+    fill:white;
+    transition: 0.5s;
+}
+
+.jobs__card-btn-employed:active {
+    background: rgba(160, 157, 255, 1);
+    transition: 0.5s;
+}
+
+/*jobs end*/
+
+/*ellipses*/
+
+.ellipse1{
+    position: absolute;
+    width: 13.21vw;
+    height: 23.49vh;
+    left: -9.38vw;
+    top: 38.28vh;
+
+    
+    background: rgba(77, 220, 255, 0.5);
+    border-radius: 50%;
+}
+
+.ellipse2{
+    position: absolute;
+    width: 20.82vw;
+    height: 36.97vh;
+    left: -13.18vw;
+    top: 31.56vh;
+
+    background: rgba(77, 220, 255, 0.5);
+    opacity: 0.45;
+    border-radius: 50%;
+}
+
+.ellipse3{
+    position: absolute;
+    width: 28.59vw;
+    height: 50.83vh;
+    left: -17.03vw;
+    top: 24.63vh;
+
+    background: rgba(77, 220, 255, 0.5);
+    opacity: 0.15;
+    border-radius: 50%;
+}
+
+.ellipse4{
+    position: absolute;
+    width: 37.46vw;
+    height: 65.81vh;
+    left: -21.18vw;
+    top: 16.3vh;
+
+    background: #4DDCFF;
+    opacity: 0.15;
+    filter: blur(2.08vw);
+    border-radius: 50%;
+}
+
+::-webkit-scrollbar {
+
+    width: 1px;
+}
+
+::-webkit-scrollbar-track {
+    background-color:rgba(255, 255, 255, 0.1);
+    border-radius: 0.52vw;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 0.52vw;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:rgb(54, 56, 58); 
+
+}
+
+
+
+
