@@ -1,0 +1,26 @@
+.intro{
+    position: absolute;
+    left: 5.208333333333334vw;
+    top: 7.96vh;
+    height: 29.07vh;
+    width: 21.3vw;
+}
+
+.intro__title{
+    width: 15.99vw;
+    height: 15.93vh;
+    font-weight: 600;
+    font-size: calc(24px + 52 * (100vw / 1920));
+    line-height: calc(24px + 58 * (100vh / 1080));
+    margin-bottom: 30px;
+    
+}
+
+.intro__subtitle{
+    width: 21.3vw;
+    height: 10.37vh;
+    font-weight: 500;
+    font-size: calc(12px + 12 * (100vw / 1920));
+    line-height: calc(12px + 16 * (100vh / 1080));
+    color: rgba(255, 255, 255, 0.35);
+}

@@ -1,0 +1,261 @@
+@import '../../assets/GLOBAL/variables';
+
+
+
+#root__of__RAF{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  background-position: center left;
+  position: relative;
+  .raf__main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+#root__reg__auth {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 145px rgba(122, 119, 185, 0.25);
+  border-radius: 24px;
+  width: 510px;
+  .form__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 30px 36px;
+  }
+
+  // !TOP/TEXT CONTENT
+  .form__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    b {
+      padding-top: 20.91px;
+      font-size: 24px;
+      line-height: 24px;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+
+  // !MIDDLE/INPUTS CONTENT
+  .inputs__form {
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    .input__form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      margin-bottom: 15px;
+
+      svg {
+        position: absolute;
+        right: 1.09375vw; // to vw
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        cursor: pointer;
+      }
+
+      input {
+        background-color: #eff0f7;
+        border-radius: 12px;
+        border: 0;
+        outline: none;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        padding-right: 50px;
+        color: #14142b;
+        letter-spacing: 0.75px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 64px;
+
+        &::-ms-reveal {
+          width: 0;
+          height: 0;
+        }
+
+        &:focus {
+          +.label__immitate {
+            top: 9px;
+          }
+        }
+      }
+
+      .label__immitate {
+        position: absolute;
+        font-weight: 600;
+        font-size: 14px;
+        top: 40%;
+        left: 64px;
+        color: #8b8fa4;
+        transition: all 0.2s ease;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .active__immitate {
+        top: 9px;
+      }
+
+      // !FORM BEFORE
+      &::before {
+        position: absolute;
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        left: 14px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    // !FORMS & BEFORE
+    .login__from {
+      position: relative;
+
+      &::before {
+        background-image: url("./img/login.svg");
+      }
+    }
+
+    .password__from {
+      &::before {
+        background-image: url("./img/password.svg");
+      }
+    }
+
+    .email__from {
+      &::before {
+        background-image: url("./img/email.svg");
+      }
+    }
+
+    .promo__from {
+      &::before {
+        background-image: url("./img/promo.svg");
+      }
+    }
+  }
+
+  // !BOTTOM/BUTTONS
+  button {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  .main__button {
+    background-color: @mainPurple;
+
+    &:hover {
+      background-color: @hoverPurple;
+    }
+  }
+
+  .other__buttons {
+    padding-top: 10px;
+    display: flex;
+
+    div:first-child {
+      margin-right: 1.5657620041753653vw;
+    }
+  }
+}
+
+
+// ИНДИВИДУАЛЬНЫЕ СЛУЧАИ СТИЛЕЙ:
+.forgot__password {
+  .main__button{
+  }
+  .other__buttons {
+    justify-content: center;
+    button{
+      margin: 0 !important;
+    }
+  }
+
+}
+
+
+// !MEDIA
+// !WHY I'M USING IMPORTANT ? parent != child elem
+@media screen and (max-width: 998px) {
+  .form {
+    width: 90%;
+    max-height: 95vh;
+    overflow-x: auto;
+  }
+
+  .other__buttons {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      margin-right: 0 !important;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 10px;
+    }
+
+    button:first-child {
+      margin-top: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 887px) {
+  #root__of__RAF{
+    flex-direction: column;
+  }
+  .lc{
+    height:auto !important;
+    .logo b{
+      font-size: 2vw !important;
+    }
+    .logo p{
+      display: none;
+    }
+  }
+  #root__reg__auth{
+    width: 70vw !important;
+  }
+  #root__main__text{
+    display: none !important;
+  }
+}

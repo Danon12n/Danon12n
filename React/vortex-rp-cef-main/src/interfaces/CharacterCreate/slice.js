@@ -13,6 +13,9 @@ export const characterCreateSlice = createSlice({
         ...action.payload,
       }
     },
+    show: (state = initialState) => {
+      state.show = !state.show;
+    }
   },
 })
 
@@ -22,4 +25,5 @@ export default characterCreateSlice.reducer
 
 export const apiFunctions = {
   characterCreate_update_main: payload => store.dispatch(characterCreateSlice.actions.update(payload)),
+  characterCreate_show: () => store.dispatch(characterCreateSlice.actions.show()),
 }

@@ -1,0 +1,67 @@
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin font ($minfsi, $maxfsi, $minflh, $maxflh, $fw , $fc) {
+    @include calc(font-size, '#{$minfsi}px + (#{$maxfsi} - #{$minfsi}) * (100vw / 1920)');
+    @include calc(line-height, '#{$minflh}px + (#{$maxflh} - #{$minflh}) * (100vh / 1080)');
+    font-weight: $fw;
+    color: $fc;
+}
+
+@mixin WiHi ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.weaponList__Container {
+    position: absolute;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 48%);
+    grid-column-gap: 4%;
+    grid-row-gap: 6%;
+
+    margin-top: 5%;
+    margin-left: 22%;
+    
+    width: 55%;
+    height: 70%;
+    @media screen and (max-width: 1600px) {
+        width: 65%;
+    }
+    @media screen and (max-width: 1040px) {
+        width: 70%;
+        margin-left: 25%;
+    }
+}
+
+
+
+.weaponList__Card {
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 7%;
+    padding-top: 7%;
+
+    &__Label {
+        @include font(8, 14, 10, 16, 500, rgba(255, 255, 255, 0.5));
+    }
+
+    &__WeaponType {
+        @include font(24, 36, 32, 44, bold, rgba(255, 255, 255, 1));
+        margin-bottom: 2%; 
+    }
+
+    &__Desc {
+        @include font(10, 12, 12, 14, normal, rgba(255, 255, 255, 0.5));
+        width: 50%;
+    }
+
+    &__Ico {
+        position: relative;
+        left: 60%;
+        bottom: 40%;
+    }
+}
