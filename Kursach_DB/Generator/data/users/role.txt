@@ -1,4 +1,0 @@
-string
-customer
-vendor
-admin

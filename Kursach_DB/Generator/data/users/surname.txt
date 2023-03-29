@@ -1,9 +1,0 @@
-string
-Krapinalo
-Trikalo
-Strikalo
-Martiko
-Nortilo
-Smith
-Brown
-Rogers
