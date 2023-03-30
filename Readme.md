@@ -28,8 +28,8 @@
 
 ### 🏭 Активность
 
-![Github stats](https://github-readme-stats.vercel.app/api?username=Danon12n&show_icons=true&theme=react&count_private=true)
+![Github stats](https://github-readme-stats.vercel.app/api?username=Danon12n&show_icons=true&theme=nightowl&count_private=true)
 
 [![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=danon12n&theme=dark&locale=ru&date_format=j%20M%5B%20Y%5D)](https://git.io/streak-stats)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Danon12n&langs_count=6&layout=compact&theme=react)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Danon12n&langs_count=6&layout=compact&theme=nightowl)
